@@ -1,0 +1,21 @@
+{
+  "name": "node-token-jwt",
+  "version": "1.0.0",
+  "description": "A Node-Express application with token-based authentication",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Node",
+    "Node",
+    "Authentication",
+    "Node",
+    "Token",
+    "Node",
+    "JWT"
+  ],
+  "author": "Alison Moura <alison.oghino@gmail.com>",
+  "license": "ISC"
+}
