@@ -14,11 +14,25 @@ app.set('superSecret', config.secret);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
 app.use(morgan('dev'));
 
 app.get('/', function (req, res) {
     res.send('Hello!');
+});
+
+app.get('/setup', function (req, res) {
+
+    var nick = new User({
+        name: 'Nick Cerminara',
+        password: 'password',
+        admin: true
+    });
+
+    nick.save(function (err) {
+        if (err) throw err;
+        console.log('User saved successfully');
+        res.json({ success: true });
+    });
 });
 
 app.listen(port);
